@@ -60,7 +60,7 @@ def server(log_buffer=sys.stdout):
                     # debugging problems.
                     print('sent "{0}"'.format(data.decode('utf8')))
                     if data:
-                        conn.sendall(data.decode('utf8'))
+                        conn.sendall(data)
                     # TODO: Check here to see if the message you've received is
                     # complete.  If it is, break out of this inner loop.
                     if len(data) < bufsize:
